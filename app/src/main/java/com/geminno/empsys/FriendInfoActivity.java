@@ -95,7 +95,7 @@ public class FriendInfoActivity extends AppCompatActivity implements View.OnClic
         String interestLabel=intent1.getStringExtra("interestLabel");
 
         iv_haoyouImg = ((ImageView) findViewById(R.id.iv_haoyouImg));
-        x.image().bind(iv_haoyouImg, NetUtils.url+"MyApp/"+userImg);
+        x.image().bind(iv_haoyouImg,NetUtils.url+"MyApp/"+userImg);
         tv_nicheng = ((TextView) findViewById(R.id.tv_nicheng2));
         tv_nicheng.setText(userName);
         tv_sex = ((TextView) findViewById(R.id.tv_sex));
