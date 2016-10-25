@@ -103,7 +103,7 @@ public class Fragment_zuyouquan_haoyou extends Fragment{
 
     }
     private void getFriendsList() {
-        RequestParams params = new RequestParams("http://10.0.2.2:8080/MyApp/getallfriendsbypage");
+        RequestParams params = new RequestParams(NetUtils.url+"MyApp/getallfriendsbypage");
 
         x.http().get(params, new Callback.CommonCallback<String>() {
 
