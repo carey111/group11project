@@ -24,6 +24,8 @@ import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.rong.imkit.RongIM;
+
 public class FriendInfoActivity extends AppCompatActivity implements View.OnClickListener{
 
     private TextView tv_friendName;
@@ -39,6 +41,8 @@ public class FriendInfoActivity extends AppCompatActivity implements View.OnClic
     private ListView lv_newext_dongtai;
     private BaseAdapter adapter;
     final List<NewestDynamicBean.Dynamic> dynamicList=new ArrayList<NewestDynamicBean.Dynamic>();
+    private Button btn_sendmsg;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +50,8 @@ public class FriendInfoActivity extends AppCompatActivity implements View.OnClic
         initData();
         btn_moredongtai = ((Button) findViewById(R.id.btn_moredongtai));
         btn_moredongtai.setOnClickListener(this);
+        btn_sendmsg = ((Button) findViewById(R.id.btn_sendmsg));
+        btn_sendmsg.setOnClickListener(this);
         lv_newext_dongtai = ((ListView) findViewById(R.id.lv_newext_dongtai));
         adapter=new BaseAdapter() {
             @Override
@@ -152,6 +158,11 @@ public class FriendInfoActivity extends AppCompatActivity implements View.OnClic
                 intent2.putExtra("userid",userId);
                 intent2.putExtra("userimg",userImg);
                 startActivity(intent2);
+                break;
+            case R.id.btn_sendmsg:
+                if (RongIM.getInstance()!=null){
+                    RongIM.getInstance().startPrivateChat(this,"2","私人聊天");
+                }
                 break;
         }
     }

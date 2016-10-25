@@ -36,6 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="求合租："
+            android:textSize="20sp"
             android:textColor="#000"/>
 
         <TextView
@@ -43,6 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000"
+            android:textSize="20sp"
             android:text="有"/>
 
     </LinearLayout>
@@ -52,11 +54,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="你好"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textColor="#000"
-        android:layout_alignBottom="@+id/iv_photoImg1"
+        android:layout_marginTop="30dp"
         android:layout_toRightOf="@+id/iv_photoImg1"
-        android:layout_toEndOf="@+id/iv_photoImg1" />
+         />
 
     <ImageView
         android:id="@+id/iv_dynamicImg1"
@@ -64,6 +66,7 @@
         android:layout_alignLeft="@+id/tv_title1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_toRightOf="@id/iv_photoImg1"
         android:layout_below="@+id/tv_content1" />
     <ImageView
@@ -80,6 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="10"
+        android:textSize="20sp"
         android:textColor="#000"
         android:layout_toRightOf="@+id/iv_dianzan"
         android:layout_alignTop="@+id/iv_dianzan"
