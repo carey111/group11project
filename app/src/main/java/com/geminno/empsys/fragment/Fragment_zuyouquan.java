@@ -26,6 +26,7 @@ import android.widget.Toast;
 import com.geminno.empsys.R;
 import com.geminno.empsys.pojo.ChatRecordBean;
 import com.geminno.empsys.pojo.Friend;
+import com.geminno.empsys.utils.NetUtils;
 import com.google.gson.Gson;
 
 import org.xutils.common.Callback;
@@ -173,8 +174,8 @@ public class Fragment_zuyouquan  extends Fragment{
     }
     private void initUserInfo() {
         userIdList = new ArrayList<Friend>();
-        userIdList.add(new Friend("1", "liu", "http://10.40.5.25:8080/MyApp/imgs/bb.png"));
-        userIdList.add(new Friend("2","li", "http://10.40.5.25:8080/MyApp/imgs/aa.png"));
+        userIdList.add(new Friend("1", "liu", NetUtils.url+"MyApp/imgs/bb.png"));
+        userIdList.add(new Friend("2","li", NetUtils.url+"MyApp/imgs/aa.png"));
         RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
             @Override
             public UserInfo getUserInfo(String s) {
